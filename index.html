@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+  <div class="player">
+    <h2>🎵 Music Player</h2>
+
+    <img id="cover" src="arun1.png" alt="Album Cover">
+
+    <p id="songName">No song selected</p>
+
+    <audio id="audio"></audio>
+
+    <input type="range" id="progress" value="0">
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="playPause()">▶ / ⏸</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+
+    <div class="extra-controls">
+      <button onclick="toggleShuffle()">🔀</button>
+      <button onclick="toggleRepeat()">🔁</button>
+      <input type="range" id="volume" min="0" max="1" step="0.01">
+    </div>
+
+    <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀</button>
+
+    <input type="file" id="songInput" multiple accept="audio/*">
+
+    <ul id="playlist"></ul>
+  </div>
+<p>Desing by Prashant Yadav</p>
+  <script src="script.js"></script>
+</body>
+</html>
